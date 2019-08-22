@@ -1,0 +1,48 @@
+<div class="about row">
+
+    <div class="col-md-8">
+
+        <h2>关于我</h2>
+        <p>95后，程序猿，喜欢有挑战的工作，然后享受舒服的生活</p>
+
+        <h2>联系方式</h2>
+        <ul>
+            <li>Email：<a href="mailto:{{ site.email }}" target="_top">{{ site.email }}</a></li>
+            <li>Website：<a href="{{ site.github_url }}">{{ site.github_url }}</a></li>
+        </ul>
+
+        <h2>技能关键字</h2>
+        {% if site.skill_j2ee_keywords %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">site.skill_j2ee_keywords</h3>
+            </div>
+            <div class="panel-body">
+                {% for keyword in site.skill_j2ee_keywords %}
+                <button class="btn btn-default" type="button">{{ keyword }}</button>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+
+        {% if site.skill_web_keywords %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Web Developer Keywords</h3>
+            </div>
+            <div class="panel-body">
+                {% for keyword in site.skill_web_keywords %}
+                <button class="btn btn-default" type="button">{{ keyword }}</button>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+
+    <div class="col-md-4">
+        {% include sidebar-popular-repo.html %}
+    </div>
+
+</div>

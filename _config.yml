@@ -1,0 +1,89 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: 木由的理想乡
+name: qiu blog
+email: qiutianyou95@qq.com
+location: 杭州
+company: 武汉佰钧成
+company_url:
+github_url: https://github.com/qiutianyou/
+description: I am a software engineer,I will change the world!
+favicon: head.png # Image must be in assets/images
+
+url:  # the base hostname & protocol for your site
+
+
+
+## Gem
+gems:
+  - jekyll-paginate
+  - jekyll-geo-pattern
+  - rouge
+  - kramdown
+  - jekyll-github-metadata
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+
+source:      .
+destination: ./_site
+
+quiet:    false
+defaults: []
+
+kramdown:
+  input: GFM
+  enable_coderay: true
+
+# Disque
+disque: qiutianyou.github.io
+
+# Pagination
+paginate: 10
+paginate_path: 'page:num'
+
+# Navigation
+navs:
+  -
+    href: /
+    label: 主页
+
+#  -
+#    href: /open-source
+#    label: Open-Source
+
+  -
+    href: /blog
+    label: 博客
+
+  -
+    href: /bookmark
+    label: 收藏
+
+  -
+    href: /about
+    label: 关于我
+
+# Sidebar to show popular repo
+side_bar_repo_limit: 5 # Number of repos to show
+
+# Google Analytics
+analytics :
+  provider : google
+  google :
+      tracking_id : 'UA-72165600-1'
+
+
+# For about.html. Fell free to create your own!
+skill_software_keywords: [Java, MySQL, Spring, Mybatis, SOFA RPC]
+skill_j2ee_keywords: [Java, MySQL, Spring, Mybatis, SOFA RPC]
+skill_web_keywords: [HTML, CSS, JS, JQuery, React, Antd]
